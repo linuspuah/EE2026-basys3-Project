@@ -1,0 +1,85 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Mar 31 21:24:12 2023
+| Host         : LAPTOP-MBJHTN7L running 64-bit major release  (build 9200)
+| Command      : report_drc -file Top_Student2_drc_routed.rpt -pb Top_Student2_drc_routed.pb -rpx Top_Student2_drc_routed.rpx
+| Design       : Top_Student2
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 8
++----------+----------+-----------------------------------------------------+------------+
+| Rule     | Severity | Description                                         | Violations |
++----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| PDRC-153 | Warning  | Gated clock check                                   | 7          |
++----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net game_start/game_start_image_reg[15]_i_2_n_2 is a gated clock net sourced by a combinational pin game_start/game_start_image_reg[15]_i_2/O, cell game_start/game_start_image_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net lose_page/game_lose_image_reg[15]_i_2_n_2 is a gated clock net sourced by a combinational pin lose_page/game_lose_image_reg[15]_i_2/O, cell lose_page/game_lose_image_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net menu/oled_data_reg[9]_3[0] is a gated clock net sourced by a combinational pin menu/neg_shift_index_reg[7]_i_2/O, cell menu/neg_shift_index_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net menu/oled_data_reg[9]_4[0] is a gated clock net sourced by a combinational pin menu/pos_shift_index_reg[7]_i_2/O, cell menu/pos_shift_index_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net redShifter/neg_R_shift_reg[7]_i_2_n_2 is a gated clock net sourced by a combinational pin redShifter/neg_R_shift_reg[7]_i_2/O, cell redShifter/neg_R_shift_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net redShifter/pos_R_shift_reg[7]_i_2_n_2 is a gated clock net sourced by a combinational pin redShifter/pos_R_shift_reg[7]_i_2/O, cell redShifter/pos_R_shift_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net win_page/game_win_image_reg[15]_i_2_n_2 is a gated clock net sourced by a combinational pin win_page/game_win_image_reg[15]_i_2/O, cell win_page/game_win_image_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+
